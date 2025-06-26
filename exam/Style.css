@@ -1,0 +1,101 @@
+ body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #89f7fe, #66a6ff);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+      justify-content: center;
+    }
+
+    .form-group input, .form-group select, .form-group button {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .user-card {
+      background: #f1f1f1;
+      margin-bottom: 10px;
+      padding: 12px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .user-info {
+      flex-grow: 1;
+    }
+
+    .user-actions button {
+      margin-left: 5px;
+    }
+
+    .message {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+  
+.form-group .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group .row input,
+.form-group .row select,
+.form-group .row button {
+  flex: 1 1 200px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.form-group .row button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.form-group .row button:hover {
+  background-color: #0056b3;
+}
