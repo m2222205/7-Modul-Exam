@@ -44,8 +44,8 @@ class App {
       return;
     }
 
-    let user = new Car(name, color, Number, speed,ProducedYear, model, isGood);
-      
+    let user = new Car(name, color, speed, Price, Number, ProducedYear, model, isGood);
+
 
     if (this.editingId) {
       const index = this.users.findIndex(u => u.id === this.editingId);
@@ -86,7 +86,7 @@ class App {
     document.getElementById('color').value = '';
     document.getElementById('Number').value = '';
     document.getElementById('speed').value = '';
-    document.getElementById('ProdecedYear').value = '';
+    document.getElementById('ProducedYear').value = '';
     document.getElementById('model').value = '';
     document.getElementById('isGood').value = '';
     document.getElementById('price').value = '';
@@ -105,26 +105,31 @@ class App {
     return;
   }
 
-  listToShow.forEach(car => {
-    const div = document.createElement('div');
-    div.innerHTML = `
-      <div class="card mb-3 shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">${car.model} (${car.year})</h5>
-          <p class="card-text">
-            🏷️ Brand: ${car.model}<br>
-            💰 Price: $${car.price}<br>
-            ⚙️ Engine: ${car.speed}
-          </p>
-          <div class="d-flex gap-2">
-            <button class="btn btn-warning btn-sm" onclick="app.editUser(${car.id})">Edit</button>
-            <button class="btn btn-danger btn-sm" onclick="app.deleteUser(${car.id})">Delete</button>
-          </div>
+ listToShow.forEach(car => {
+  const div = document.createElement('div');
+  div.innerHTML = `
+    <div class="card mb-3 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">${car.model} (${car.ProducedYear})</h5>
+        <p class="card-text">
+          🚘 Name: ${car.name}<br>
+          🎨 Color: ${car.color}<br>
+          ⚙️ Speed: ${car.speed}<br>
+          🔢 Number: ${car.Number}<br>
+          📅 Produced Year: ${car.ProducedYear}<br>
+          🏷️ Model: ${car.model}<br>
+          💰 Price: $${car.Price}<br>
+          ✅ Is Good: ${car.isGood ? "Yes" : "No"}
+        </p>
+        <div class="d-flex gap-2">
+          <button class="btn btn-warning btn-sm" onclick="app.editCar(${car.id})">Edit</button>
+          <button class="btn btn-danger btn-sm" onclick="app.deleteCar(${car.id})">Delete</button>
         </div>
       </div>
-    `;
-    this.userListEl.appendChild(div);
-  });
+    </div>
+  `;
+  this.userListEl.appendChild(div);
+});
 }
 
 }
